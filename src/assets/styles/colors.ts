@@ -1,6 +1,6 @@
 export const colors = {
-    primaryColor: '#b5005f',
-    secondaryColor: '#e8cd18',
+    primaryColor: '#e8cd18',
+    secondaryColor: '#b5005f',
 
     primaryColorOpacity: '#b5005f40',
 
