@@ -5,6 +5,7 @@ const Login = () => {
         <S.Login>
             <S.LoginContent>
                 <BoxLogin />
+                
             </S.LoginContent>
         </S.Login>
     );
