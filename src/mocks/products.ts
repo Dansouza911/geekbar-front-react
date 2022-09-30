@@ -1,3 +1,5 @@
+import { ProductResponse } from "types/Product";
+
 export const products = [
 	{
 		id:          '507f191e810c19729de860ea',
