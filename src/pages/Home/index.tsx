@@ -4,6 +4,9 @@ import { ReactComponent as Search } from "assets/icons/search.svg";
 import Menu from "components/menu";
 import { RoutePath } from "types/routes";
 import { navigationItems } from "data/navigation";
+import ProductItemList from "components/ProductItemList";
+import ProductItem from "components/ProductItem";
+import OrderDetails from "components/OrderDetails";
 
 
 const Home = () => {
@@ -31,11 +34,14 @@ const Home = () => {
           <b>Pratos</b>
         </S.HomeProductTitle>
         <S.HomeProductList>
-          <p>Lista de produtos Aqui</p>
+          <ProductItemList>
+            <ProductItem/>
+          </ProductItemList>
+
         </S.HomeProductList>
       </S.HomeContent>
       <aside>
-        <p>Detalhes dos pedidos aqui</p>
+        <OrderDetails/>
       </aside>
     </S.Home>
   );
