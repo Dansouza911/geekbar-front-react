@@ -1,10 +1,12 @@
-export const orders = [
+import { OrderItemType } from "types/OrderItemType";
+
+export const orders: OrderItemType[] = [
 	{
 		product: {
 			id:          '507f191e810c19729de860ea',
 			name:        'Peperoni',
 			description: 'Peperoni e Mussarela',
-			image:       'assets/images/menu/peperoni.png',
+			image:       'assets/imgs/peperoni.png',
 			price:       40.69,
 		},
 		quantity: 1,
@@ -15,7 +17,7 @@ export const orders = [
 			id:          '507f191e810c19729de860ea',
 			name:        'Anchovas',
 			description: 'Anchovas, Calabresa, Tomate, Congumelos e Cebola',
-			image:       'assets/images/menu/anchovas.png',
+			image:       'assets/imgs/anchovas.png',
 			price:       40.29,
 		},
 		quantity: 3,
