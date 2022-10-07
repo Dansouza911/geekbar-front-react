@@ -4,11 +4,11 @@ import * as S from "./style";
 type ButtonType = ButtonHTMLAttributes<HTMLButtonElement>;
 
 type ButtonLargeProps = {
-	value: string;
+  value: string;
 } & ButtonType;
 
 const ButtonLarge = ({ value, ...props }: ButtonLargeProps) => {
-	return <S.ButtonLarge {...props}>{value}</S.ButtonLarge>;
+  return <S.ButtonLarge {...props}>{value}</S.ButtonLarge>;
 };
 
 export default ButtonLarge;

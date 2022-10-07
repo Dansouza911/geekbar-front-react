@@ -1,15 +1,17 @@
 import * as S from "./style";
 import { ReactComponent as Logout } from "assets/icons/logout.svg";
-import logo from 'assets/imgs/GeekBarLogo.png';
+import logo from "assets/imgs/GeekBarLogo.png";
 import { RoutePath } from "types/routes";
 import { NavItem } from "./types";
 
 interface MenuProps {
   active: RoutePath;
   navItems: NavItem[];
+  onNavigate: (data: RoutePath) => void;
+  onLogout: () => void;
 }
 
-const Menu = ({ active, navItems }: MenuProps) => {
+const Menu = ({ active, navItems, onNavigate, onLogout }: MenuProps) => {
   return (
     <S.Menu>
       <nav>
@@ -18,14 +20,17 @@ const Menu = ({ active, navItems }: MenuProps) => {
         </S.MenuLogo>
         {navItems.map((item, index) => (
           <S.MenuItem key={`MenuItem-${index}`} active={item.path === active}>
-            <S.MenuItemButton active={item.path === active}>
-                {item.icon}
+            <S.MenuItemButton
+              active={item.path === active}
+              onClick={() => onNavigate(item.path)}
+            >
+              {item.icon}
             </S.MenuItemButton>
           </S.MenuItem>
         ))}
       </nav>
 
-      <S.MenuItemLogout>
+      <S.MenuItemLogout onClick={onLogout}>
         <Logout />
       </S.MenuItemLogout>
     </S.Menu>

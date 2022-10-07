@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import theme from "assets/styles/theme";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
+        <QueryClientProvider client={queryClient}>
           <Router />
         </QueryClientProvider>
       </BrowserRouter>
